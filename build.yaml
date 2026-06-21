@@ -1,0 +1,21 @@
+# Конфигурационный файл сборки Wonderful Editor
+app_name: "Wonderful Editor"
+package_name: "com.feige.wonderfuleditor"
+version: "0.1-Beta"
+build_target: "APK"
+compilation_environment: "GitHub Actions"
+
+trigger_on:
+  push_branches:
+    - "*"
+  manual_dispatch: true
+
+outputs:
+  artifact_name: "Wonderful-Editor-APK"
+  apk_path: "app/build/outputs/apk/debug/app-debug.apk"
+
+instructions: |
+  1. Создайте новый пустой репозиторий на GitHub.
+  2. Загрузите в него все файлы из этой папки (включая папку .github и этот файл build.yaml).
+  3. GitHub Actions автоматически обнаружит конфигурационный файл в .github/workflows/build.yml и запустит сборку.
+  4. Перейдите во вкладку "Actions" в вашем репозитории на GitHub, выберите запущенный воркфлоу и скачайте собранный APK-файл из секции "Artifacts" внизу страницы.
